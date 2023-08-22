@@ -29,4 +29,6 @@ Implementación de Servidor de Registro Eureka, implementamos servicios como cli
 ```
 y añadimos la anotación @EnableCircuitBraker en la clase principal para habilitarlo.
 ![image](https://github.com/joanvasquez21/microservicios-producto-items-eureka/assets/70104624/1ca75841-1650-404e-be82-7852232361aa)
+5.- Añadimos la anotación @HystrixCommand(fallbackMethod="nombredelmetodoalternativo")
+![image](https://github.com/joanvasquez21/microservicios-producto-items-eureka/assets/70104624/fb92867e-6c5b-4d78-be82-dd6add92976c)
 

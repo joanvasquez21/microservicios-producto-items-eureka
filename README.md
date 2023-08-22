@@ -31,4 +31,15 @@ y añadimos la anotación @EnableCircuitBraker en la clase principal para habili
 ![image](https://github.com/joanvasquez21/microservicios-producto-items-eureka/assets/70104624/1ca75841-1650-404e-be82-7852232361aa)
 5.- Añadimos la anotación @HystrixCommand(fallbackMethod="nombredelmetodoalternativo")
 ![image](https://github.com/joanvasquez21/microservicios-producto-items-eureka/assets/70104624/fb92867e-6c5b-4d78-be82-dd6add92976c)
-
+6.- Configurando los timeout para hystrix, añadimos en el application.properties
+```
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 130000
+ribbon.ConnectTimeout: 3000
+ribbon.ReadTimeout: 10000
+```
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 130000
+Esta configuración establece el tiempo maximo (en milisegundos) que Hystrix esperara por la respuesta de un comando antes de considerarlo como una solicitud que ha excedido el tiempo de espera y debe ser manejada de acuerdo a las políticas de Hystrix (como activar el circuit breaker o ejecutar una lógica de respaldo).
+ribbon.ConnectTimeout: 3000
+Esta configuración se refiere a la cantidad de tiempo (en milisegundos) que el cliente Ribbon (utilizado para el balanceo de carga en entornos de microservicios) esperará para establecer una conexión con un servicio.
+ribbon.ReadTimeout: 10000
+Esta configuración se relaciona con el tiempo máximo (en milisegundos) que el cliente Ribbon esperará para recibir la respuesta de un servicio después de haber establecido la conexión.

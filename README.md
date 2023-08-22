@@ -37,9 +37,9 @@ hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 130000
 ribbon.ConnectTimeout: 3000
 ribbon.ReadTimeout: 10000
 ```
-hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 130000
+**hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 130000**
 Esta configuración establece el tiempo maximo (en milisegundos) que Hystrix esperara por la respuesta de un comando antes de considerarlo como una solicitud que ha excedido el tiempo de espera y debe ser manejada de acuerdo a las políticas de Hystrix (como activar el circuit breaker o ejecutar una lógica de respaldo).
-ribbon.ConnectTimeout: 3000
+**ribbon.ConnectTimeout: 3000**
 Esta configuración se refiere a la cantidad de tiempo (en milisegundos) que el cliente Ribbon (utilizado para el balanceo de carga en entornos de microservicios) esperará para establecer una conexión con un servicio.
-ribbon.ReadTimeout: 10000
+**ribbon.ReadTimeout: 10000**
 Esta configuración se relaciona con el tiempo máximo (en milisegundos) que el cliente Ribbon esperará para recibir la respuesta de un servicio después de haber establecido la conexión.

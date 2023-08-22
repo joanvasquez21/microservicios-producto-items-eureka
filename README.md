@@ -4,10 +4,10 @@ Implementación de Servidor de Registro Eureka, implementamos servicios como cli
 
 ```
 
-	<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
-		</dependency>
+<dependency>
+	<groupId>org.springframework.cloud</groupId>
+	<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+</dependency>
 ```
 2.-En los microservicios clientes añadimos la dependencia eureka-client
 
@@ -17,3 +17,5 @@ Implementación de Servidor de Registro Eureka, implementamos servicios como cli
 	<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 </dependency>
 ```
+3.-Escalamos microservicios con puertos dinámicos,  generamos instancias distintas en un puerto distinto
+![image](https://github.com/joanvasquez21/microservicios-producto-items-eureka/assets/70104624/6edba286-0297-49a5-8a0d-6f96aa3da147)

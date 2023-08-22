@@ -27,6 +27,6 @@ Implementación de Servidor de Registro Eureka, implementamos servicios como cli
 	<artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
 </dependency>
 ```
-y añadimos la anotación @EnableCircuitBraker en la clase principal para habilitarlo
+y añadimos la anotación @EnableCircuitBraker en la clase principal para habilitarlo.
 ![image](https://github.com/joanvasquez21/microservicios-producto-items-eureka/assets/70104624/1ca75841-1650-404e-be82-7852232361aa)
 

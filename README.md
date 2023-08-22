@@ -19,3 +19,14 @@ Implementación de Servidor de Registro Eureka, implementamos servicios como cli
 ```
 3.-Escalamos microservicios con puertos dinámicos,  generamos instancias distintas en un puerto distinto
 ![image](https://github.com/joanvasquez21/microservicios-producto-items-eureka/assets/70104624/6edba286-0297-49a5-8a0d-6f96aa3da147)
+
+4.- Para trabajar con tolerancia a fallos y latencia en hystrix agregamos la siguiente dependencia 
+```
+<dependency>
+	<groupId>org.springframework.cloud</groupId>
+	<artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+</dependency>
+```
+y añadimos la anotación @EnableCircuitBraker en la clase principal para habilitarlo
+![image](https://github.com/joanvasquez21/microservicios-producto-items-eureka/assets/70104624/1ca75841-1650-404e-be82-7852232361aa)
+

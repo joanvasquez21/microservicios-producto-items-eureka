@@ -43,3 +43,23 @@ Esta configuración establece el tiempo maximo (en milisegundos) que Hystrix esp
 Esta configuración se refiere a la cantidad de tiempo (en milisegundos) que el cliente Ribbon (utilizado para el balanceo de carga en entornos de microservicios) esperará para establecer una conexión con un servicio.
 **ribbon.ReadTimeout: 10000**
 Esta configuración se relaciona con el tiempo máximo (en milisegundos) que el cliente Ribbon esperará para recibir la respuesta de un servicio después de haber establecido la conexión.
+
+7.- Creando servidor zuul, creamos un nuevo proyecto  y añadimos en el pom la siguiente dependencia
+
+```<dependency>
+	<groupId>org.springframework.cloud</groupId>
+	<artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+</dependency>
+```
+8.- En su clase principal añadimos la anotacion @EnableZuulProxy y configuramos como cliente Eureka 
+![image](https://github.com/joanvasquez21/microservicios-producto-items-eureka/assets/70104624/448f733c-096c-4d49-9189-93d51be85c38)
+9.- Se conectara a traves de las siguientes puertas de enlace /api/items/** y /api/productos/**
+![image](https://github.com/joanvasquez21/microservicios-producto-items-eureka/assets/70104624/998fcca1-b193-4c5e-b01d-05c256f56e4d)
+10.- Añadimos filtros zuul http pre
+Pre: Se ejecuta antes de que el request sea enrutado, se utiliza para pasar datos al request
+Post: Se ejecuta despues de que el request haya sido enrutad, se usa para modificar la respuesta
+
+![image](https://github.com/joanvasquez21/microservicios-producto-items-eureka/assets/70104624/a5091118-9b91-4088-8052-1d20287e25a9)
+![image](https://github.com/joanvasquez21/microservicios-producto-items-eureka/assets/70104624/8d20e2ad-bc21-409a-8ebb-a84ed43a75c4)
+
+
